@@ -10,7 +10,8 @@ Mysql https://www.mysql.com/
 
 
   
- #INSTRUÇOES DE USO
+ #INSTRUÇOES DE USO APÓS INSTALAR AS DEPENCIAS ACIMA
+ 
  
  1 - CLONE O PROJETO
  
