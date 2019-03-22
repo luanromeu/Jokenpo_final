@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  ip:'http://api.tetsistemas.com.br:3001'
+  ip:'http://jokenpo.appbars.com.br:3001'
 
 };
