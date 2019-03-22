@@ -33,20 +33,20 @@
 
 <div class="d-flex align-items-center justify-content-center flex-row " style="height: 400px; margin-bottom: 50px; text-align: center">
 
-  <div class="p-4 bd-highlight" >
-    
-      <img *ngIf="StartGame == true && imageCom == 'pedra' " src="../../assets/pedra.png" style="width: 8rem">
-      <img *ngIf="StartGame == true && imageCom == 'papel' " src="../../assets/papel.png" style="width: 8rem">
-      <img *ngIf="StartGame == true && imageCom == 'tesoura' " src="../../assets/tesoura.png" style="width: 8rem">
+    <div class="p-4 bd-highlight" >
+        <img *ngIf="StartGame == true && imagePlayer == 'tesoura' " src="../../assets/tesoura.png" style="width: 8rem">
+        <img *ngIf="StartGame == true && imagePlayer == 'papel' " src="../../assets/papel.png" style="width: 8rem">
+        <img *ngIf="StartGame == true && imagePlayer == 'pedra' "  src="../../assets/pedra.png" style="width: 8rem">
       
-  </div>
+    </div>
   <h1 *ngIf="StartGame == true" style="color: white; font-size: 7rem">X</h1>
-  <div class="p-4 bd-highlight" >
-      <img *ngIf="StartGame == true && imagePlayer == 'tesoura' " src="../../assets/tesoura.png" style="width: 8rem">
-      <img *ngIf="StartGame == true && imagePlayer == 'papel' " src="../../assets/papel.png" style="width: 8rem">
-      <img *ngIf="StartGame == true && imagePlayer == 'pedra' "  src="../../assets/pedra.png" style="width: 8rem">
-    
-  </div>
+    <div class="p-4 bd-highlight" >
+      
+        <img *ngIf="StartGame == true && imageCom == 'pedra' " src="../../assets/pedra.png" style="width: 8rem">
+        <img *ngIf="StartGame == true && imageCom == 'papel' " src="../../assets/papel.png" style="width: 8rem">
+        <img *ngIf="StartGame == true && imageCom == 'tesoura' " src="../../assets/tesoura.png" style="width: 8rem">
+        
+    </div>
 </div>
 <div class="d-flex flex-row justify-content-center" style="margin-bottom: 20px">
 
