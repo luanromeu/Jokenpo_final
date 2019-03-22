@@ -3,7 +3,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const global = require('../config')
 const Sequelize = require('sequelize');
 
 
