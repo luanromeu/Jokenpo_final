@@ -1,8 +1,11 @@
 # JOkenpo
 
-Requerimentos para o projeto.
+Requerimentos para o projeto
+
 NodeJS https://nodejs.org/en/
+
 Angular 7 https://cli.angular.io/
+
 Mysql https://www.mysql.com/
 
 
