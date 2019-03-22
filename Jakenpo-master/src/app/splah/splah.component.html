@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JokenPo</title>
+
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="d-flex justify-content-center h-100">
+      <div class="card">
+        <div class="card-header " style="text-align: center">
+          <h3>Bem Vindo ao Jokenpo</h3>
+          <div class="d-flex justify-content-end social_icon">
+          </div>
+        </div>
+        <div class="card-body" style="padding-bottom:1px; padding-top: 1px;">
+          <form style="text-align: center;"> 
+            <h3 style="color: aliceblue">Resumo</h3>
+            <p style="color: whitesmoke; margin-bottom: 1px">
+              O Jokenpo se resume em um jogo de Jokenpo online onde voce tera como oponenete uma maquina virtual,
+               e terá apenas 10 rounds para vence-la , seja sabio em suas escolhas e saia como um vencedor.. ! 
+               </p>
+        
+            <form>
+                <div class="form-group">
+                  <input [(ngModel)]="PlayerName" name="something" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Insira seu nome para iniciar">
+                </div>
+              </form>
+          </form>
+        </div>
+        <div class="card-footer">
+            <div class="d-flex justify-content-center">
+                <input type="submit" value="Inicar" (click)="verify()"class="btn float-right login_btn">
+              </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

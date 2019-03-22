@@ -1,0 +1,120 @@
+<html>
+<head>
+</head>
+<body>
+
+
+<div class="container" style="padding:10px">
+
+  
+
+    <div class="d-flex justify-content-between" style="height:50px">
+
+      <div class="input-group mb-3" style="width: 15rem">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">{{Player}} </span>
+        </div>
+        <input readonly type="text"  class="form-control" placeholder="Computer" value="{{PlayerScore}}" aria-label="Player" aria-describedby="basic-addon1" style="text-align: center; font-weight: bold">
+      </div>
+
+          <h2 style="color:aliceblue">Round {{Round}} </h2>
+          
+
+          <div class="input-group mb-3" style="width: 15rem">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">COMPUTADOR </span>
+              </div>
+              <input readonly type="text"  class="form-control" placeholder="Computer" value="{{ComScore}}" aria-label="com" aria-describedby="basic-addon1" style="text-align: center; font-weight: bold">
+            </div>
+</div>
+
+ 
+<div class="d-flex flex-column justify-content-center" style="height: 90%">
+
+<div class="d-flex align-items-center justify-content-center flex-row " style="height: 400px; margin-bottom: 50px; text-align: center">
+
+  <div class="p-4 bd-highlight" >
+    
+      <img *ngIf="StartGame == true && imageCom == 'pedra' " src="../../assets/pedra.png" style="width: 8rem">
+      <img *ngIf="StartGame == true && imageCom == 'papel' " src="../../assets/papel.png" style="width: 8rem">
+      <img *ngIf="StartGame == true && imageCom == 'tesoura' " src="../../assets/tesoura.png" style="width: 8rem">
+      
+  </div>
+  <h1 *ngIf="StartGame == true" style="color: white; font-size: 7rem">X</h1>
+  <div class="p-4 bd-highlight" >
+      <img *ngIf="StartGame == true && imagePlayer == 'tesoura' " src="../../assets/tesoura.png" style="width: 8rem">
+      <img *ngIf="StartGame == true && imagePlayer == 'papel' " src="../../assets/papel.png" style="width: 8rem">
+      <img *ngIf="StartGame == true && imagePlayer == 'pedra' "  src="../../assets/pedra.png" style="width: 8rem">
+    
+  </div>
+</div>
+<div class="d-flex flex-row justify-content-center" style="margin-bottom: 20px">
+
+    <div class="card">
+        <h5 class="card-header">{{Text}}</h5>
+       
+      </div>
+</div>
+
+<div class="d-flex flex-row justify-content-between galeria" >
+    <img (click)="verify('tesoura')" class="galeria" src="../../assets/tesoura.png" style="width: 10rem">
+    <img (click)="verify('papel')" class="galeria" src="../../assets/papel.png" style="width: 10rem">
+    <img (click)="verify('pedra')" class="galeria" src="../../assets/pedra.png" style="width: 10rem">
+</div>
+
+
+
+
+  </div>   
+    </div>
+    
+    <button [hidden]="true" type="button" id="btnmodal" class="btn btn-primary" data-toggle="modal" data-target="#Modal">
+    </button>
+
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" >
+          <div class="modal-header" >
+            <div class="d-flex flex-row justify-content-center" style="text-align: center">
+            <h2 class="modal-title" id="exampleModalLabel">Ultimas 5 Rodadas</h2> 
+          </div>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped" id="table" [hidden]="tableActive==true || table == 'internos'">
+              <thead>
+                <tr id="tbody">
+                  <th scope="col">Player</th>
+                  <th scope="col">Pontuação</th>
+                  <th scope="col">COMPUTADOR</th>
+               </tr>
+            </thead>
+            <tbody  *ngFor = "let player of getPlayers">
+            
+            <td>
+            {{player.Nome}}
+            </td>
+            <td>
+            {{player.Pontos}}
+            </td>
+            <td>
+           {{player.comPontos}}
+            </td>
+            
+      
+            
+            
+            </tbody>         
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" (click)="NewGame()" class="btn btn-secondary" data-dismiss="modal">Novo Jogo</button>
+            <button type="button" (click)="ResumeGame()" class="btn btn-primary" data-dismiss="modal">Continuar Jogando</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
