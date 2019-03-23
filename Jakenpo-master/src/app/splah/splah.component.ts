@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { routerNgProbeToken } from '@angular/router/src/router_module';
+import { SoundService } from '../services/sound.service';
 
 @Component({
   selector: 'app-splah',
@@ -9,12 +10,18 @@ import { routerNgProbeToken } from '@angular/router/src/router_module';
 })
 export class SplahComponent implements OnInit {
 PlayerName;
-  constructor(private router:Router) { }
+  constructor(
+            private router:Router,
+            private soundservice: SoundService
+            ) { }
 
   
 
   ngOnInit() {
+    this.soundservice.playAudio()
   }
+
+
 
   //Metodo que Verifica se foi preenchido o input 
   verify(){

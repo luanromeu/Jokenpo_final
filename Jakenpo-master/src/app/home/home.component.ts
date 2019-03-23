@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { getPlayers } from '@angular/core/src/render3/players';
 import { environment } from 'src/environments/environment';
+import { SoundService } from '../services/sound.service';
+
 
 
 
@@ -29,7 +31,8 @@ export class HomeComponent implements OnInit {
 
   constructor ( 
              public router: Router,
-             public http: HttpClient
+             public http: HttpClient,
+             private sounservice: SoundService
              ) { }
 // No OnInit do Componente Pega o usuario Salvo e seta o texto Inicial na tela
   ngOnInit() {
@@ -104,6 +107,7 @@ export class HomeComponent implements OnInit {
 }
 
 async NewGame() {
+  this.sounservice.stopAduio();
   localStorage.clear();
   this.StartGame = false;
   this.router.navigate(['inicio']);
