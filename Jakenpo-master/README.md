@@ -1,4 +1,4 @@
-# JOkenpo
+# Jokenpo
 
 Requerimentos para o projeto
 
