@@ -18,7 +18,7 @@ PlayerName;
   
 
   ngOnInit() {
-    this.soundservice.playAudio()
+
   }
 
 

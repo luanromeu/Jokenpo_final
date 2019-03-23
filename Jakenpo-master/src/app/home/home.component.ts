@@ -38,6 +38,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.Player = localStorage.getItem('player');
     this.Text = 'Escolha Sua Jogada...'
+    this.sounservice.playAudio();
   }
 //Função para maquina fazer sua jogada
 //Possuo um array com 3 strings numeradas de 0 a 2
